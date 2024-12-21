@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Teacher Quiz</title>
+    <link rel="stylesheet" href="idea.css">
+    <link rel="stylesheet" href="idea2.css">
+</head>
+<body>
+    <header>
+        <h1>Guess the Teacher Quiz</h1>
+    </header>
+    <h2>Who Could this Be?</h2>
+    <div class="teacherImages">
+        <img class="Easy" src="DeRuiterAugust2020ear.jpg" alt="Teacher">
+        <img class="Easy" src="DeRuiterAugust2020mouth.jpg" alt="Teacher">
+        <img class="Easy" src="Choieye.jpg" alt="Teacher">
+        <img class="Easy" src="Cassareye.png" alt="Teacher">
+        <img class="Easy" src="Alan-Wongsmile.jpg" alt="Teacher">
+        <img class="Easy" src="Cassarforehead.png" alt="Teacher">
+        <img class="Easy" src="PayneEye.jpg" alt="Teacher">
+        <img class = "Easy" src = "Birsongeye.png" alt = "Teacher">
+        <img class="Easy" src = "Kuoglasses.png" alt ="Mr.Kuo">
+        <img class = "Hard" src= "Mcracken.png" alt = Teacher>
+        <img class="Hard" src="Paynehair.jpg" alt="Payne Hair">
+        <img class="Hard" src="Lordaneye.png" alt="Lordan Eye">
+        <img class="Hard" src="Lordanmouth.png" alt="Lordan Mouth">
+        <img class="Hard" src="Crease.jpg" alt="Alan Crease">
+        <img class="Hard" src="Alan-Wongeyebrow.jpg" alt="Alan eyebrow">
+        <img class="Hard" src="Choiforhead.jpg" alt="Choi head">
+        <img class = "Hard" src="CernaForhead.png" alt = "Cerna Head">
+        <Img class = "Hard" src="Collinseye.png" alt = "Collins">
+    </div>
+    <p> You only have 5 attempts. Look at each image and select each answer carefully.<br>
+		The mode is set to "Easy" by default. <br>You can try more challenging images with the 
+		"Hard" button.<br>Your score is on the top right.</p>
+    <h3>Teacher Options</h3>
+    <form id="quizForm" onsubmit="event.preventDefault();">
+        <div>
+            <select id="teacherSelect">
+                <option value="" disabled selected>Select a teacher</option>
+                <option value="DeRuiter">Mr. DeRuiter</option>
+                <option value="Choi">Mrs. Choi</option>
+                <option value="Cassar">Ms. Cassar</option>
+                <option value="Wong">Mr. Wong</option>
+                <option value="Payne">Mr. Payne</option>
+                <option value="Lordan">Mr. Lordan</option>
+                <option value="Kuo">Mr. Kuo</option>
+                <option value="Conlin">Mr. Conlin</option>
+                <option value = "Cerna"> Mr.Cerna </option>
+                <option value = "Borelli"> Ms.Borelli</option>
+                <option value = "Collins"> Ms.Collins</option>
+                <option value = "Birdsong"> Mr. Birdsong</option>
+                <option value ="Mcracken"> Mrs. Mcracken</option>
+            </select>
+            <button type="button" onclick="checkAnswer()">Submit</button>
+        </div>
+        <div id="scoreDisplay">Your score: 0</div>
+    </form>
+    <p id="result"></p>
+    <button class="mode" onclick="easyTeacherSelector()">Easy</button>
+    <button class="mode" onclick="hardTeacherSelector()">Hard</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
